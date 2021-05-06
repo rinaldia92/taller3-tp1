@@ -6,7 +6,6 @@ from counter import Counter
 from task import Task
 from my_html import get_html
 from logger import Logger
-from cache import Cache
 
 app = Flask(__name__)
 
@@ -17,7 +16,6 @@ queue = os.environ.get('QUEUE', 'counter-task')
 logger = Logger(project)
 counter = Counter('Counter', 100, logger)
 task = Task(project, location, queue, logger)
-cache = Cache(10, logger)
 
 host =f'https://{project}.uc.r.appspot.com'
 
@@ -27,10 +25,7 @@ def home():
     trace_header = request.headers.get("X-Cloud-Trace-Context")
     logger.info('Getting home page', trace_header)
     task.add_task('home', trace_header)
-    data = cache.get_data('home', trace_header)
-    if not data:
-        data = counter.get_by_key('home', trace_header)
-        cache.set_data('home', data, trace_header)
+    data = counter.get_by_key('home', trace_header)
     return render_template_string(get_html(host, 'home', data))
 
 @app.route('/jobs')
@@ -39,10 +34,7 @@ def jobs():
     trace_header = request.headers.get("X-Cloud-Trace-Context")
     logger.info('Getting jobs page', trace_header)
     task.add_task('jobs', trace_header)
-    data = cache.get_data('jobs', trace_header)
-    if not data:
-        data = counter.get_by_key('jobs', trace_header)
-        cache.set_data('jobs', data, trace_header)
+    data = counter.get_by_key('jobs', trace_header)
     return render_template_string(get_html(host, 'jobs', data))
 
 @app.route('/about')
@@ -51,10 +43,7 @@ def about():
     trace_header = request.headers.get("X-Cloud-Trace-Context")
     logger.info('Getting about page', trace_header)
     task.add_task('about', trace_header)
-    data = cache.get_data('about', trace_header)
-    if not data:
-        data = counter.get_by_key('about', trace_header)
-        cache.set_data('about', data, trace_header)
+    data = counter.get_by_key('about', trace_header)
     return render_template_string(get_html(host, 'about', data))
 
 @app.route('/legals')
@@ -63,10 +52,7 @@ def legals():
     trace_header = request.headers.get("X-Cloud-Trace-Context")
     logger.info('Getting legals page', trace_header)
     task.add_task('legals', trace_header)
-    data = cache.get_data('legals', trace_header)
-    if not data:
-        data = counter.get_by_key('legals', trace_header)
-        cache.set_data('legals', data, trace_header)
+    data = counter.get_by_key('legals', trace_header)
     return render_template_string(get_html(host, 'legals', data))
 
 @app.route('/home', methods = ['POST'])

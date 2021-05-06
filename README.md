@@ -118,7 +118,7 @@ El sistema cuenta con tres paquetes:
 
 ## 7- Test de carga
 
-Los resultados del test de carga se encuentran [aqui]("/Load Test.md")
+Los resultados del test de carga se encuentran [aqui](./load_test.md)
 
 ## 8- Futura mejora
 

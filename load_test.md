@@ -51,7 +51,7 @@ stages = [
 ## 2- Sin cache
 ### 2.1- Maximo 1 instancia
 
-El reporte completo se encuentra [aqui](./reportes/sin_cache_1_instancia_report.html)
+El reporte completo se encuentra [aqui](https://htmlpreview.github.io/?https://github.com/rinaldia92/taller3-tp1/blob/master/reportes/sin_cache_1_instancia_report.html)
 
 Se observa que empieza a fallar cuando empieza a alcanzar a los 500 usuarios concurrentes. En ese momento se observa que empieza a oscilar las requests por segundo aumentando levemente a medida que el sistema se estabiliza. Pasa lo mismo al ir subiendo de 500 a 1000 usuarios. En ambos casos aproximadamente un 10% de las requests fallan. Cuando se vuelve a subir a los 1000 usuarios pero con una tasa mas alta vemos que fallan aproximadamente 20% de las requests.
 
@@ -62,7 +62,7 @@ Se observa que empieza a fallar cuando empieza a alcanzar a los 500 usuarios con
 
 ### 2.2- Maximo 3 instancias
 
-El reporte completo se encuentra [aqui](./reportes/sin_cache_3_instancia_report.html)
+El reporte completo se encuentra [aqui](https://htmlpreview.github.io/?https://github.com/rinaldia92/taller3-tp1/blob/master/reportes/sin_cache_3_instancia_report.html)
 
 A diferencia del caso anterior, al tener la posibilidad de tener mas instancias disponibles, observamos que tenemos un poco mas de requests por segundo. Las fallas ocurren al subir a los 1000 usuarios pero representan un 5% de las requests.
 
@@ -74,7 +74,7 @@ A diferencia del caso anterior, al tener la posibilidad de tener mas instancias 
 ## 3- Con cache 1 seg
 ### 3.1- Maximo 1 instancia
 
-El reporte completo se encuentra [aqui](./reportes/con_cache_1_instancia_report.html)
+El reporte completo se encuentra [aqui](https://htmlpreview.github.io/?https://github.com/rinaldia92/taller3-tp1/blob/master/reportes/con_cache_1_instancia_report.html)
 
 A diferencia de los casos anteriores, observamos que el response time baja siendo la mediana la mitad del tiempo. Esto tambien provocó un aumento de RPS. Las fallas se presentaron al subir a 1000 usuarios pero con una tasa de aproximadamente del 1% de error.
 
@@ -85,7 +85,7 @@ A diferencia de los casos anteriores, observamos que el response time baja siend
 
 ### 3.2- Maximo 3 instancias
 
-El reporte completo se encuentra [aqui](./reportes/con_cache_3_instancia_report.html)
+El reporte completo se encuentra [aqui](https://htmlpreview.github.io/?https://github.com/rinaldia92/taller3-tp1/blob/master/reportes/con_cache_3_instancia_report.html)
 
 En este caso observamos que la tasa de error baja a menos del 1%.
 Aca tambien observamos que la primera vez que subimos a 1000 usuarios solamente tenemos activas hasta 2 instancias. Pero en la segunda vez, al subir con una tasa mas alta, se llegan a activar las 3 instancias.
@@ -97,7 +97,7 @@ Aca tambien observamos que la primera vez que subimos a 1000 usuarios solamente 
 
 ### 3.3- Maximo 3 instancias con mas carga
 
-El reporte completo se encuentra [aqui](./reportes/con_cache_3_instancia_mayor_carga_reporte.html)
+El reporte completo se encuentra [aqui](https://htmlpreview.github.io/?https://github.com/rinaldia92/taller3-tp1/blob/master/reportes/con_cache_3_instancia_mayor_carga_reporte.html)
 
 Para este caso particular, aumentamos la carga hasta 2000 usuarios. Los pasos son:
 

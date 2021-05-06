@@ -51,40 +51,40 @@ stages = [
 ## 2- Sin cache
 ### 2.1- Maximo 1 instancia
 
-El reportecompleto se encuentra [aqui](./reportes/sin_cache_1_instancia_response_time.index)
+El reportecompleto se encuentra [aqui](./reportes/sin_cache_1_instancia_response_time.html)
 
+<img src="/images/sin_cache_1_instancia_requests.png">
 <img src="/images/sin_cache_1_instancia_response_time.png">
-<img src="/images/sin_cache_1_instancia_response_time.png">
-<img src="/images/sin_cache_1_instancia_response_time.png">
-<img src="/images/sin_cache_1_instancia_response_time.png">
+<img src="/images/sin_cache_1_instancia_users.png">
+<img src="/images/sin_cache_1_instancia_instancias.png">
 
 ### 2.2- Maximo 3 instancias
 
-El reportecompleto se encuentra [aqui](./reportes/sin_cache_3_instancia_response_time.index)
+El reportecompleto se encuentra [aqui](./reportes/sin_cache_3_instancia_response_time.html)
 
+<img src="/images/sin_cache_3_instancia_requests.png">
 <img src="/images/sin_cache_3_instancia_response_time.png">
-<img src="/images/sin_cache_3_instancia_response_time.png">
-<img src="/images/sin_cache_3_instancia_response_time.png">
-<img src="/images/sin_cache_3_instancia_response_time.png">
+<img src="/images/sin_cache_3_instancia_users.png">
+<img src="/images/sin_cache_3_instancia_instancias.png">
 
 ## 3- Con cache 1 seg
 ### 3.1- Maximo 1 instancia
 
-El reportecompleto se encuentra [aqui](./reportes/con_cache_1_instancia_response_time.index)
+El reportecompleto se encuentra [aqui](./reportes/con_cache_1_instancia_response_time.html)
 
+<img src="/images/con_cache_1_instancia_requests.png">
 <img src="/images/con_cache_1_instancia_response_time.png">
-<img src="/images/con_cache_1_instancia_response_time.png">
-<img src="/images/con_cache_1_instancia_response_time.png">
-<img src="/images/con_cache_1_instancia_response_time.png">
+<img src="/images/con_cache_1_instancia_users.png">
+<img src="/images/con_cache_1_instancia_instancias.png">
 
 ### 3.2- Maximo 3 instancias
 
-El reportecompleto se encuentra [aqui](./reportes/con_cache_3_instancia_response_time.index)
+El reportecompleto se encuentra [aqui](./reportes/con_cache_3_instancia_response_time.html)
 
+<img src="/images/con_cache_3_instancia_requests.png">
 <img src="/images/con_cache_3_instancia_response_time.png">
-<img src="/images/con_cache_3_instancia_response_time.png">
-<img src="/images/con_cache_3_instancia_response_time.png">
-<img src="/images/con_cache_3_instancia_response_time.png">
+<img src="/images/con_cache_3_instancia_users.png">
+<img src="/images/con_cache_3_instancia_instancias.png">
 
 ## 4- Con cache 10 seg
 ### 4.1- Maximo 3 instancias

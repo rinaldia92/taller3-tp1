@@ -35,7 +35,7 @@ Se proponen los siguientes casos:
     * Maximo 1 instancia
     * Maximo 3 instancias
 
-El test de carga utilizado es:
+Se utilizó locust para realizar el test de carga y los stages utilizados son:
 
 ```
 stages = [
@@ -47,6 +47,14 @@ stages = [
     {"duration": 1100, "users": 1, "spawn_rate": 20},
 ]
 ```
+
+Cada requests se lanza entre 1 y 2.5 seg. (uniforme) y se utilizan 4 tasks distintas  (cada una tiene una prioridad distinta):
+* home(5): hace una request a /home
+* jobs(4): hace una request a /jobs
+* about(2): hace una request a /about
+* legals(1): hace una request a /legals
+
+En todas las requests se realiza el pedido de los recursos de la página web (secuencialmente).
 
 ## 2- Sin cache
 ### 2.1- Maximo 1 instancia

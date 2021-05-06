@@ -72,7 +72,7 @@ Como fue explicado en los objetivos hay 4 casos de uso:
 ### 3.1- Diagrama de clases
 
 El sistema web cuenta con las siguientes clases:
-* Counter: Clase encargada de establecer la conexión con el datastore y obtener/guardar los datos.
+* Counter: Clase encargada de establecer la conexión con el datastore y obtener/guardar los datos. La particularidad de esta clase es que permite pasarle una cantidad de particiones para que se generen tantas entities como particiones para cada contaador. De esta manera habrá menos coalisiones al momento de actualizar. 
 * Task: Clase encargadada de conectarse con cloud task y agregarle tareas.
 * Cache: Clase encargada de simular una cache en memoria.
 * Logger: Clase encargada de loggear. El proceso principal y las clases utilizan este logger y se mantiene la traza.
@@ -122,4 +122,9 @@ Los resultados del test de carga se encuentran [aqui](./load_test.md)
 
 ## 8- Futura mejora
 
-Para mejorar los tiempos de respuesta se debe implementar que sea otro proceso el encargado de agregar una tarea a la queue task.
+Para mejorar los tiempos de respuesta se debe implementar:
+* que la renderización del html este del lado del cliente.
+* un proceso que se encargue de agregar una tarea a la queue task.
+
+Ademas para bajar el uso de la o las instancias se puede pasar la responsabilidad de actualizar la base de datos a otro servicio.
+

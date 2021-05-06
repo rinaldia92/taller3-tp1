@@ -21,6 +21,7 @@
     - [3.1- Maximo 1 instancia](#31--maximo-1-instancia)
     - [3.2- Maximo 3 instancias](#32--maximo-3-instancias)
     - [3.3- Maximo 3 instancias con mas carga](#33--maximo-3-instancias-con-mas-carga)
+- [4- Conclusiones](#4--conclusiones)
 
 ## 1- Casos propuestos
 
@@ -96,7 +97,7 @@ Aca tambien observamos que la primera vez que subimos a 1000 usuarios solamente 
 
 ### 3.3- Maximo 3 instancias con mas carga
 
-El reporte completo se encuentra [aqui](./reportes/con_cache_3_instancia_mayor_carga_report.html)
+El reporte completo se encuentra [aqui](./reportes/con_cache_3_instancia_mayor_carga_reporte.html)
 
 Para este caso particular, aumentamos la carga hasta 2000 usuarios. Los pasos son:
 
@@ -119,5 +120,11 @@ Tambien, al tener menor RPS, tenemos menos instancias activas.
 <img src="/images/con_cache_3_instancia_mayor_carga_users.png">
 <img src="/images/con_cache_3_instancia_mayor_carga_instancias.png">
 
+## Conclusiones
 
+Como se observó en los casos, el agregado de cache mejoró la performance significativamente y provocó la baja de la tasa de requests fallidos.
+Observando los logs, como el siguiente:
 
+<img src="/images/logs.png">
+
+se observa que una request gasta 100 ms o incluso mas en agregar una tarea a la task queue. Esto puede mejorarse pasando la responsabilidad a otro proceso.

@@ -1,0 +1,4 @@
+Flask==1.1.2
+redis==3.5.3
+google-cloud-datastore==2.1.0
+google-cloud-tasks==2.2.0
